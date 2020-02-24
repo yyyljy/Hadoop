@@ -35,6 +35,7 @@ public class WordCountMapper extends Mapper<LongWritable, Text, Text, IntWritabl
 		//value는 입력데이터의 한 라인에 해당하는 문장 ex) read a book
 		
 		StringTokenizer st =new StringTokenizer(value.toString());
+		System.out.println(key + ":" + value);
 		while(st.hasMoreTokens()) {
 			String token = st.nextToken();
 			outputKey.set(token); //output데이터의 키를 셋팅
